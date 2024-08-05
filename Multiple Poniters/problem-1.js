@@ -3,6 +3,9 @@
 // [1,1,1,3,4,4,5,5,6]
 
 const countUniqueValues = (arr) => {
+  if (arr.length === 0) {
+    return 0;
+  }
   let left = 0;
   let right = 1;
   while (right < arr.length) {
@@ -16,4 +19,4 @@ const countUniqueValues = (arr) => {
   }
   return left + 1;
 };
-console.log(countUniqueValues([1, 1, 1, 3, 4, 4, 5, 5, 6, 6, 7, 8, 8, 9]));
+console.log(countUniqueValues([]));
